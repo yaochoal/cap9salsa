@@ -1,0 +1,24 @@
+Compile el archivo fuente SALSA en un archivo fuente Java usando el compilador SALSA.
+Se recomienda incluir el archivo SALSA JAR en la ruta de su clase.
+Alternativamente, puede usar -cp para especificar su ruta en la línea de comandos.
+Si está utilizando MS Windows, use el punto y coma (;) como un delimitador de ruta de clase, 
+si está usando casi cualquier otra cosa, use dos puntos (:). 
+Por ejemplo:
+
+java -cp salsa1.1.5.jar;. salsac.SalsaCompiler salsa/HelloWorld.salsa
+
+Utilice cualquier compilador de Java para compilar el archivo Java generado. 
+Asegúrese de especificar la ruta de la clase SALSA usando 
+-classpath si no la ha incluido ya en su ruta:
+
+javac -classpath salsa1.1.5.jar;. salsa/HelloWorld.java
+
+Ejecuta tu programa:
+java -cp salsa1.1.5.jar;. salsa/HelloWorld
+
+
+
+
+java -cp salsa1.1.5.jar;. salsac.SalsaCompiler salsa/HelloWorld.salsa
+javac -classpath salsa1.1.5.jar;. salsa/HelloWorld.java
+java -cp salsa1.1.5.jar;. salsa/HelloWorld

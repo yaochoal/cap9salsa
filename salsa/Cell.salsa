@@ -1,0 +1,20 @@
+module salsa;
+
+behavior Cell{
+    Object content;
+    Cell(Object c){
+        content = c;
+    }
+    Object get(){
+        return content;
+    }
+    void set(Object c){
+        content = c;
+    }
+    void act(String args[]){
+        Cell c = new Cell("hello");
+        token t = c <- get() @
+        c <- set("world");
+        standardOutput <- print(t);
+    }
+}
